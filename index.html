@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillSprint Academy — Learn Web, AI, Design &amp; Business</title>
+  <meta name="description" content="SkillSprint Academy is a portfolio sample of an online learning platform: browse sample courses, build a demo cart, and track sample lesson progress." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="SkillSprint Academy home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" /></svg>
+        </span>
+        SkillSprint <span class="logo-accent">Academy</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#courses">Courses</a>
+        <a href="#progress">My Progress</a>
+        <a href="#how-it-works">How it works</a>
+      </nav>
+      <button class="cart-button" id="cartButton" type="button" aria-label="Open enrolment cart">
+        Cart <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Portfolio sample &middot; Demo learning platform</p>
+          <h1>Learn a new skill, one sprint at a time.</h1>
+          <p class="hero-copy">Browse sample courses in web development, AI &amp; data, design and business. Add courses to your demo cart, check out with no payment, and track your sample lesson progress.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#courses">Browse courses</a>
+            <a class="btn btn-secondary" href="#progress">Track progress</a>
+          </div>
+          <ul class="hero-facts">
+            <li><strong>8</strong><span>sample courses</span></li>
+            <li><strong>4</strong><span>categories</span></li>
+            <li><strong>0</strong><span>payment required</span></li>
+          </ul>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="hero-card-top">
+            <span class="pill">Sample course</span>
+            <span class="pill pill-light">Beginner</span>
+          </div>
+          <h2>HTML &amp; CSS Fundamentals</h2>
+          <p>Build your first responsive web page from scratch.</p>
+          <div class="mini-progress"><span style="width: 60%"></span></div>
+          <p class="mini-progress-label">Sample progress: 3 of 5 lessons complete</p>
+          <div class="hero-card-row">
+            <span>6 weeks</span>
+            <span class="price">PKR 4,500</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section class="section" id="courses">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2>Course catalogue</h2>
+            <p>Search by title or topic, and filter by category. All courses below are sample content for this portfolio demo.</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <label class="search-box">
+            <span class="visually-hidden">Search courses</span>
+            <input type="search" id="searchInput" placeholder="Search courses, e.g. Python, design, Excel&hellip;" autocomplete="off" />
+          </label>
+          <div class="filters" role="group" aria-label="Filter by category">
+            <button class="filter-btn active" type="button" data-filter="All">All</button>
+            <button class="filter-btn" type="button" data-filter="Web Development">Web Development</button>
+            <button class="filter-btn" type="button" data-filter="AI &amp; Data">AI &amp; Data</button>
+            <button class="filter-btn" type="button" data-filter="Design">Design</button>
+            <button class="filter-btn" type="button" data-filter="Business">Business</button>
+          </div>
+        </div>
+
+        <p class="results-count" id="resultsCount" aria-live="polite"></p>
+        <div class="course-grid" id="courseGrid"></div>
+        <p class="empty-state hidden" id="emptyState">No sample courses match your search. Try a different keyword or choose another category.</p>
+      </div>
+    </section>
+
+    <!-- Progress tracker -->
+    <section class="section section-alt" id="progress">
+      <div class="container progress-grid">
+        <div>
+          <h2>My progress — demo tracker</h2>
+          <p>Tick off lessons in this sample track and your progress is saved in your browser (localStorage). It is a demo only — no account, no server, and nothing is sent anywhere.</p>
+          <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBarWrap">
+            <span id="progressBar"></span>
+          </div>
+          <p class="progress-label" id="progressLabel"></p>
+          <button class="btn btn-secondary" id="resetProgress" type="button">Reset demo progress</button>
+        </div>
+        <div class="lesson-card">
+          <h3>Sample track: Web Development Sprint</h3>
+          <p class="muted">A short sample curriculum used only to demonstrate the tracker.</p>
+          <ul class="lesson-list" id="lessonList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <h2>How this demo works</h2>
+        <div class="steps">
+          <article class="step">
+            <span class="step-number">1</span>
+            <h3>Find a course</h3>
+            <p>Use search and category filters to explore the sample catalogue.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">2</span>
+            <h3>Add to cart</h3>
+            <p>Add courses, review the total in PKR, and remove anything you change your mind about.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">3</span>
+            <h3>Check out (demo)</h3>
+            <p>Checkout shows a demo confirmation only. No payment is taken and no enrolment is created.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">4</span>
+            <h3>Track progress</h3>
+            <p>Mark sample lessons complete and return later — your browser remembers them.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart drawer -->
+  <div class="cart-overlay hidden" id="cartOverlay"></div>
+  <aside class="cart-drawer hidden" id="cartDrawer" aria-label="Enrolment cart">
+    <div class="cart-head">
+      <h2>Your cart</h2>
+      <button class="close-btn" id="closeCart" type="button" aria-label="Close cart">&times;</button>
+    </div>
+    <p class="muted">Demo cart only — no payment will be taken.</p>
+    <ul class="cart-items" id="cartItems"></ul>
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="cartTotal">PKR 0</strong>
+    </div>
+    <button class="btn btn-primary btn-full" id="checkoutButton" type="button">Check out (demo)</button>
+    <div class="checkout-message hidden" id="checkoutMessage" role="status"></div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>SkillSprint Academy</strong> — Portfolio sample. All courses, prices and content on this page are demo/sample content only. No real enrolment or payment is offered here.</p>
+      <p>Demo contact: hello@skillsprint.example (sample address, demo only)</p>
+      <p>Built by Muhammad Umer Samroze — Portfolio Sample</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
